@@ -12,8 +12,15 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
             },
+            gridTemplateColumns: {
+                // Simple 16 column grid
+                'layout': '12rem auto 20rem',
+
+                // Complex site-specific column configuration
+                'footer': '200px minmax(900px, 1fr) 100px',
+              },
         },
     },
 

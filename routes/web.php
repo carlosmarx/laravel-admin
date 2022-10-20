@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,8 @@ use Inertia\Inertia;
 */
 
 Route::resource('posts', PostController::class);
+Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('admin/orders', [DashboardController::class, 'index'])->name('admin.orders');
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
